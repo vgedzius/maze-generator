@@ -1,7 +1,7 @@
 var grid;
 
-var nRows = 25;
-var nCols = 25;
+var nRows = 10;
+var nCols = 10;
 var w = 20;
 
 function setup() {
@@ -12,7 +12,7 @@ function setup() {
 
   background(0);
 
-  grid = new Grid(nRows, nCols);
+  grid = new Grid(nCols, nRows);
 }
 
 function draw() {

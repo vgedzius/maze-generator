@@ -15,10 +15,10 @@ function Grid(rows, cols) {
   this.current.visited  = true;
 
   this.cell = function(x, y) {
-    if (x < 0 || y < 0 || x > this.cols-1 || y > this.rows-1) {
+    if (x < 0 || y < 0 || x > this.rows-1 || y > this.cols-1) {
       return;
     }
-    return this.cells[x * this.rows + y];
+    return this.cells[x * this.cols + y];
   }
 
   this.show = function() {
