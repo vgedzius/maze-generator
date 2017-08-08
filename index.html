@@ -19,13 +19,34 @@
     <div class="controls">
       <form>
 
-        <!-- <div class="form-group row">
-          <label for="max-iterations" class="col-3 col-form-label">Max Iterations</label>
-          <div class="col-9">
-            <input type="text" id="max-iterations" class="form-control" value="256">
+        <div class="form-group row">
+          <label for="size-x" class="col-3 col-form-label">Grid size</label>
+          <div class="input-group col-9">
+            <input type="text" id="size-x" class="form-control" value="10">
+            <input type="text" id="size-y" class="form-control" value="20">
           </div>
-        </div> -->
+        </div>
 
+        <div class="form-group row">
+          <label for="cell-size" class="col-3 col-form-label">Cell size</label>
+          <div class="col-9">
+            <input type="text" id="cell-size" class="form-control" value="20" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="speed" class="col-3 col-form-label">Speed</label>
+          <div class="col-9">
+            <input type="text" id="speed" class="form-control" value="10" />
+            <small>-1 unlimited. Depends on computer speed</small>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-9 offset-3">
+            <button type="button" id="generate" class="btn btn-primary">Generate</button>
+          </div>
+        </div>
         
       </form>
     </div>
