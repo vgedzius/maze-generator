@@ -5,7 +5,7 @@ var nRows;
 var nCols;
 var w;
 
-var frameRate;
+var speed;
 
 // controls
 var rowsInput;
@@ -16,7 +16,6 @@ var generateBtn;
 
 function setup() {
   noStroke();
-  frameRate(frameRate);
   noLoop();
   background(0);
 
@@ -28,28 +27,28 @@ function setup() {
 
   initVariables();
 
-  canvas = createCanvas(nCols * w, nRows * w);
+  canvas = createCanvas(nRows * w, nCols * w);
   canvas.parent('canvas-container');
-
-  grid = new Grid(nCols, nRows);
 
   generateBtn.mousePressed(function() {
     initVariables();
+    canvas = resizeCanvas(nRows * w, nCols * w);
+    grid = new Grid(nRows, nCols);
     loop();
-
-    canvas = resizeCanvas(nCols * w, nRows * w);
-
-    return false;
   });
 }
 
 function draw() {
-  grid.show().update();
+  if (grid) {
+    grid.show().update();
+  }
 }
 
 function initVariables() {
   nCols     = parseInt(colsInput.value());
   nRows     = parseInt(rowsInput.value());
   w         = parseInt(cellSizeInput.value());
-  frameRate = parseInt(speedInput.value());
+  speed     = parseInt(speedInput.value());
+
+  frameRate(speed);
 }

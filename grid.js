@@ -4,7 +4,6 @@ function Grid(rows, cols) {
   this.cols = cols;
   this.stack = [];
 
-  // populate grid
   for (var i=0; i<this.rows; i++) {
     for (var j=0; j<this.cols; j++) {
       this.cells.push(new Cell(i, j));
